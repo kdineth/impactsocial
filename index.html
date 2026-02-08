@@ -320,8 +320,8 @@
             </div>
         </div>
 
-        <!-- Horizontal Scroll Container -->
-        <div class="flex gap-4 sm:gap-6 overflow-x-auto px-4 sm:px-6 pb-12 no-scrollbar snap-x snap-mandatory city-card-container reveal">
+        <!-- Horizontal Scroll Container - Added xl:justify-center to center cards on large screens -->
+        <div class="flex gap-4 sm:gap-6 overflow-x-auto px-4 sm:px-6 pb-12 no-scrollbar snap-x snap-mandatory city-card-container reveal xl:justify-center">
             
             <!-- Card 1: Colombo (3D Enabled) -->
             <div class="city-card min-w-[85vw] md:min-w-[600px] h-[400px] sm:h-[450px] relative rounded-2xl sm:rounded-[2rem] overflow-hidden cursor-pointer group snap-center border border-white/20" onmousemove="handleMouseMove(event, this)" onmouseleave="handleMouseLeave(this)">
@@ -383,9 +383,10 @@
                     </p>
 
                     <form class="flex flex-col gap-4 sm:gap-6 text-left max-w-md mx-auto w-full" onsubmit="event.preventDefault(); alert('Request sent!');">
-                        <input type="email" class="minimal-input w-full py-3 sm:py-4 text-center text-base sm:text-lg text-white font-normal appearance-none" placeholder="Enter your email address">
+                        <!-- Updated Input Style to Box -->
+                        <input type="email" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-4 text-center text-base sm:text-lg text-white placeholder-gray-500 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all" placeholder="Enter your email address">
                         
-                        <button type="submit" class="w-full bg-white text-black font-bold py-3.5 sm:py-4 rounded-lg hover:bg-gray-200 transition-all transform hover:scale-[1.01] active:scale-[0.99] text-xs sm:text-sm uppercase tracking-wider shadow-lg touch-manipulation">
+                        <button type="submit" class="w-full bg-white text-black font-bold py-3.5 sm:py-4 rounded-xl hover:bg-gray-200 transition-all transform hover:scale-[1.01] active:scale-[0.99] text-xs sm:text-sm uppercase tracking-wider shadow-lg touch-manipulation">
                             Request Invitation
                         </button>
                     </form>
