@@ -62,11 +62,11 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* Enhanced Glass Nav */
+        /* Enhanced Glass Nav - Stronger Blur for Mobile */
         .nav-glass {
-            background: rgba(5, 5, 5, 0.7);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(5, 5, 5, 0.85); /* Slightly darker for better contrast */
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
@@ -116,28 +116,14 @@
         .city-overlay {
             background: linear-gradient(to top, #050505 0%, transparent 80%);
         }
-
-        /* Custom Input */
-        .minimal-input {
-            background: transparent;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            border-radius: 0;
-        }
-        .minimal-input:focus {
-            border-color: #ffffff;
-            outline: none;
-        }
-        .minimal-input::placeholder {
-            color: #6b7280;
-        }
     </style>
 </head>
 <body>
 
     <nav class="fixed w-full z-50 top-0 nav-glass transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex justify-between items-center relative z-50">
-            <a href="#" class="text-base sm:text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 h-16 sm:h-20 flex justify-between items-center relative z-50">
+            
+            <a href="#" class="text-lg sm:text-xl font-extrabold tracking-tight hover:opacity-80 transition-opacity flex items-center gap-0.5">
                 Impact Social<span class="text-brand-accent">.</span>
             </a>
             
@@ -148,9 +134,8 @@
                 <a href="https://luma.com/w5374c9f" target="_blank" class="bg-white text-black px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wide hover:bg-gray-200 transition-all transform hover:scale-105">RSVP Now</a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-white p-2 touch-manipulation focus:outline-none">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2 -mr-2 hover:bg-white/10 rounded-full transition-colors touch-manipulation focus:outline-none active:scale-95">
+                <i data-lucide="menu" class="w-6 h-6 stroke-[2.5]"></i> </button>
         </div>
 
         <div id="mobile-menu" class="fixed inset-0 bg-brand-black/98 backdrop-blur-xl z-[60] flex flex-col items-center justify-center space-y-8 opacity-0 pointer-events-none transition-all duration-500">
@@ -159,13 +144,13 @@
             <a href="#global" class="text-3xl font-bold tracking-tight mobile-link py-2">Global</a>
             <a href="https://luma.com/w5374c9f" target="_blank" class="text-3xl font-bold mobile-link py-2 text-brand-accent">RSVP</a>
             
-            <button id="close-menu-btn" class="absolute top-6 right-6 p-2 rounded-full border border-white/10 touch-manipulation">
+            <button id="close-menu-btn" class="absolute top-6 right-6 p-2 rounded-full border border-white/10 touch-manipulation active:scale-90 transition-transform">
                 <i data-lucide="x" class="w-6 h-6 text-white"></i>
             </button>
         </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-20 sm:pt-24 relative overflow-hidden">
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 pt-24 sm:pt-28 relative overflow-hidden">
         
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/[0.02] rounded-full blur-[100px] pointer-events-none"></div>
 
